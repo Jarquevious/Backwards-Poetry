@@ -32,3 +32,10 @@ def lines_printed_random():
  
 def my_own_rearrange():
     pass 
+
+#TODO: get a list of strings that contains lines of poem
+#Use lines = poem.split("\n")
+ 
+ 
+#Testing code
+#lines_printed_backwards(poem_lines_list):
