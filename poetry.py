@@ -11,3 +11,11 @@ Frozen with snow.
 '''
 #TODO: get a list of strings that contains lines of poem
 
+def lines_printed_backwards(poem_lines_list):
+    ''' This function takes in a list of 
+    strings containing the lines of 
+    your poem as arguments and 
+    will print the poem 
+    lines out in reverse 
+    with the line numbers reversed.'''
+    pass
