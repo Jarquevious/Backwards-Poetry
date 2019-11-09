@@ -1,29 +1,31 @@
-import random 
+import random as random  
 
-poem ='''
-Hold fast to dreams
+poem ='''Hold fast to dreams
 For if dreams die
 Life is a broken-winged bird
 That cannot fly.
-
 Hold fast to dreams
 For when dreams go
 Life is a barren field
-Frozen with snow.
-'''
+Frozen with snow.'''
 poems = poem.split("\n")   
 
 #TODO: get a list of strings that contains lines of poem
 
-def lines_printed_backwards(poem_lines_list):
+def lines_printed_backwards(poems):
     ''' This function takes in a list of 
     strings containing the lines of 
     your poem as arguments and 
     will print the poem 
     lines out in reverse 
     with the line numbers reversed.'''
-    for i in poem_lines_list:
-        print(i[::-1])
+    index = len(poems)
+    poems.reverse()
+
+    for i in poems:
+        print(f'{str(index)} {i}')
+        index -= 1
+    
     
     
     
@@ -37,8 +39,11 @@ def lines_printed_random(poem_lines_list):
     to the original number of lines in the poem 
     (line numbers don't need to be printed). 
     Hint: try using a loop and randint()  '''
-    for i in poem_lines_list:
-        print(random.choice(poems))
+    for i in poems:
+        lines_random = random.randint(0, (len(poems)-1)) 
+        print(poems[lines_random])
+
+    
 
     
  
@@ -48,17 +53,10 @@ def my_own_rearrange():
     followed by 'hold fast to dreams' three 
     times on three different lines
     '''
-# poemss = random.choice(random.randrange(poems))
+    for poem in poems:
+        print(poem[::-1])
+    
 
-
-
-x=0
-while x <= 3:
-    for i in poems:
-        print(i)
-        print('Hold fast to dreams')
-    x += 3   
-    print('Hold fast to dream')
 
 #TODO: get a list of strings that contains lines of poem
 #Use lines = poem.split("\n")
